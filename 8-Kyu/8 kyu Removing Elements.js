@@ -7,6 +7,9 @@
 
 // None of the arrays will be empty, so you don't have to worry about that!
 
+
+
+
 function removeEveryOther(arr){
   let result=[]
   for(i=0; i<arr.length; i++){
