@@ -20,6 +20,6 @@ function interest(p,r,n) {
     let simple = Math.round(p*(1+n*r))
     let comp = Math.round(p*(1+r)**n)
     
-    return [simple,comp]
+    return [simple, comp]
   
 }
