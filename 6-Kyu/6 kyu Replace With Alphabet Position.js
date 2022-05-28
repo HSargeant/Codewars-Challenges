@@ -14,5 +14,4 @@ function alphabetPosition(text) {
   console.log(result)
   
   return result.filter(x=>x>0 && x<27).join(" ")
-  
 }
