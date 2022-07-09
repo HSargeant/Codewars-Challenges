@@ -7,6 +7,7 @@
 // My washing machine is an old model that can only handle double the amount of load (or max_load). If the amount of clothes is more than 2 times the standard amount of load (max_load), return 'Too much clothes'. The washing machine also cannot handle any amount of clothes less than load (max_load). If that is the case, return 'Not enough clothes'.
 
 // The answer should be rounded to the nearest 2 decimal places.
+
 function howMuchWater(water, load, clothes){
   let over=clothes-load 
   if(load > clothes)
