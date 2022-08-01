@@ -40,3 +40,5 @@ function Node(data, next = null) {
     
   }
 
+
+
