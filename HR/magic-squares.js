@@ -72,8 +72,6 @@ function formingMagicSquare(s) {
         ]
  s = s.flat()
              let currentSum =0
-
-let sSum = s.reduce((a,c)=>a+c,0)
 for(let i = 0; i<answ.length; i++){
              currentSum =0
 
