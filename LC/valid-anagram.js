@@ -1,6 +1,6 @@
 var isAnagram = function(s, t) {
     if(s.length!=t.length) return false
-    for(i=0; i<Math.max(s.length,t.length); i++ ){
+    for(i=0; i<s.length; i++ ){
         if(!s.includes(t[i])) {
             return false
         }
