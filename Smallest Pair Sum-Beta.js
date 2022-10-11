@@ -13,32 +13,8 @@ Ex :
 
 [1,1,2] => 1+1 = 2
 */
-
 function smallestPairSum(numbers){
-  
-let min = numbers[0]
-  
-for(let i=0; i<numbers.length; i++){
-    if(numbers[i] < min ){
-        min = numbers[i]
-    }
-}
-
-let index = 0
-
-while(numbers[index] != min){
-  index++ 
-}
-numbers.splice(index, 1)
-  
-let min2=numbers[1]
-
-for(let i=0; i<=numbers.length; i++){
-
-    if(numbers[i] < min2){
-        min2=numbers[i]
-    }
-}
-  
-  return  min2 + min
+  numbers.sort((a,b)=>a-b)
+  let [x,y]=numbers
+  return x+y
 }
