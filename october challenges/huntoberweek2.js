@@ -41,18 +41,20 @@ checkEquality(arr1, arr4) /*false*/
 
 const moveRight=(a,e)=>{
     let index = a.indexOf(e)
-    if(!a[index+1]) return a
+    if(a[index+1]){ 
     let temp = a[index]
     a[index] = a[index+1]
     a[index+1] = temp
+}
     return a
 }
 const moveLeft=(a,e)=>{
     let index = a.indexOf(e)
-    if(!a[index-1]) return a
+    if(a[index-1]){
     let temp = a[index]
     a[index] = a[index-1]
     a[index-1] = temp
+}
     return a
 }
 
@@ -156,7 +158,7 @@ function moveUp(a,t){
 // myArray = [[1,2,3],[4,5,6],[7,8,9]]
 // // shuffle shuffle
 // => [[8,3,5],[2,4,9],[6,7,1]]
-const shuffleArr=(a,times)=>{
+const shuffleArr=(a,times=10)=>{
     let len=a.length
     while(times){
         let ch1=Math.floor(Math.random()*len),ch2=Math.floor(Math.random()*len)
