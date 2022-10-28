@@ -1,7 +1,7 @@
 function solve(arr) {  
   let res = arr.map(a=>{
-    let x = new Set(a)
-    return [...x].length
+    let set = new Set(a)
+    return set.size
   })
 return res.reduce((a,c)=>a*c,1)  
 }
