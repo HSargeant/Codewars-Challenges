@@ -2516,7 +2516,7 @@ let score={
 
 code=code.split("\n").map(x=>x.split(" ")) //array of pairs
 
-
+// part 1 using the same code for both turns ex .. A is rock for both..
 // tie
 //you win
 //you lose
