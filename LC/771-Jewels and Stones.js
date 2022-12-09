@@ -3,7 +3,7 @@ var numJewelsInStones = function(jewels, stones) {
     const j={}
     let count=0
     for(i=0; i<jewels.length; i++){
-        j[jewels[i]] =  j[jewels[i]]+1 ||1
+        j[jewels[i]] =  1
     }
     for(i=0; i<stones.length; i++){
        if(j[stones[i]]) count++
