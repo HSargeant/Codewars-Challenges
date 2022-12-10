@@ -26,7 +26,7 @@ function isVisible(grid){
     let count=0
 
     const visibleRight=(n,r,c)=>{
-        if(r==row-1 || c==col-1||r ==0 || c ==0) {
+        if(c==col-1) {
             return true
         }
         let testCol = c+1
@@ -40,7 +40,7 @@ function isVisible(grid){
     }
 
     const visibleLeft=(n,r,c)=>{
-        if(r==row-1 || c==col-1||r ==0 || c ==0) {
+        if(c ==0) {
             
             return true
         }
@@ -56,7 +56,7 @@ function isVisible(grid){
     }
 
     const visibleUp=(n,r,c)=>{
-        if(r==row-1 || c==col-1||r ==0 || c ==0) {
+        if(r ==0) {
             
             return true
         }
@@ -69,7 +69,7 @@ function isVisible(grid){
         return true
     }
     const visibleDown=(n,r,c)=>{
-        if(r==row-1 || c==col-1||r ==0 || c ==0) {
+        if(r==row-1) {
             
             return true
         }
