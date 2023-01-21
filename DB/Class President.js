@@ -20,5 +20,5 @@ function electionResults(arr){
     return res
 }
 
-console.log(electionResults([1, 1, 2, 2, 1])) //1
+console.log(electionResults([1, 1, 2, 2, 1])) //1git 
 console.log(electionResults([1, 3, 2, 3, 1, 2, 3, 3, 3])) /3
