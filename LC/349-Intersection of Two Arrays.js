@@ -19,10 +19,10 @@
 // 0 <= nums1[i], nums2[i] <= 1000
 // easy
 var intersection = function(a, b) {
-    let res=[]
-       for(i=0; i<a.length; i++){
-           if(a.includes(a[i]) && b.includes(a[i]) && !res.includes(a[i])) res.push(a[i])     
-       }
-   
-return res    
+    let obj={},res=[]
+    a.forEach(x=>obj[x]=true)
+    for(x of b){
+        if(obj[x]) res.push(x)
+    }
+   return [...new Set(res)]  
 };

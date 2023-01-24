@@ -116,20 +116,3 @@ const computePaths = timeLeft => {
 
     return paths.filter(p => p.finished).sort((a, b) => b.releasedPressure-a.releasedPressure);
 }
-
-const part2 = () => {
-    let paths = computePaths(26), max = 0;
-
-    // this needs some memoization / speed-up / rethinking. Runs approx for 2 minutes ;/
-    for (let i = 0; i < paths.length; i++)
-        for (let j = i+1; j < paths.length; j++)
-            if (paths[i].steps.every(s => !paths[j].steps.includes(s)))
-                if (paths[i].releasedPressure+paths[j].releasedPressure > max) {
-                    console.log('we have a new p2 max', paths[i].releasedPressure+paths[j].releasedPressure );
-                    max = paths[i].releasedPressure+paths[j].releasedPressure;
-                    break
-                }
-}
-
-console.log(computePaths(30)[0].releasedPressure); // p1
-part2();

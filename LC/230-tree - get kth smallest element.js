@@ -13,14 +13,13 @@
  */
 var kthSmallest = function(root, k) {
     let arr= []
-    let getEmAll=(root)=>{
+    let getEmAll=(root)=>{  //preorder
         if(!root) return
-        arr.push(root.val)
         getEmAll(root.left)
+        arr.push(root.val)
         getEmAll(root.right)
     }
     getEmAll(root)
-    arr.sort((a,b)=>a-b)
     return arr[k-1]
     
 };

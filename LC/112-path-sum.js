@@ -27,10 +27,13 @@
 // -1000 <= Node.val <= 1000
 // -1000 <= targetSum <= 1000
 var hasPathSum = function(root, targetSum) {
-    const dfs=(root,sum=targetSum)=>{
-        if(!root) return false;
-        if(!root.left&& !root.right && sum-root.val==0) return true;
-        return dfs(root.left, sum- root.val) || dfs(root.right, sum - root.val);
+    if(!root) return false
+    const dfs=(root,sum=0)=>{
+        if(!root) return false
+        if(!root.left&&!root.right) {
+            return (sum+root.val)==targetSum
+        }
+        return dfs(root.left,sum+root.val)||dfs(root.right,sum+root.val)
     }
     return dfs(root)
 };

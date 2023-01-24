@@ -17,20 +17,15 @@ var removeNthFromEnd = function(head, n) {
         temp=temp.next
         count++
     }
-        let idx = count-n+1
+    let check = count-n
+    if(check === 0) return head.next; 
+        temp=head
+        while(check-1){
+            temp=temp.next
+            check--
+        }
+        temp.next=temp.next.next
 
-    if(idx==1) return head.next
-    temp = head
-    let prev=null
-    
-    while(idx>1){
-        prev = temp
-        temp=temp.next
-        idx--
-    }
-    console.log(temp)
-    
-    prev.next = temp.next
     return head
 }
 

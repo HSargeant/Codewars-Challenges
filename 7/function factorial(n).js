@@ -9,3 +9,9 @@ function factorial(n)
 }
 
 // write a function to calculate facotorial
+// recursion 
+// const factorial=(n)=>{
+//   if(n<0 || n>12) throw RangeError
+//   if(n==0) return 1
+//   return n*factorial(n-1)
+// }
