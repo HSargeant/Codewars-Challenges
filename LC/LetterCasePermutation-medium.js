@@ -2,8 +2,6 @@
 
 // Return a list of all possible strings we could create. Return the output in any order.
 
- 
-
 // Example 1:
 
 // Input: s = "a1b2"
@@ -14,13 +12,11 @@
 // Output: ["3z4","3Z4"]
  var letterCasePermutation = function(s) {
     let res=[]
-    
     const back=(str, i, arr = [],temp="")=>{
         if(i===str.length || temp.length===str.length){
             arr.push(temp);
             return
-        }
-        
+        } 
         if(str[i].charCodeAt(0)>47 && str[i].charCodeAt(0)<58){
             back(str, i+1, arr,temp + str[i]);
 
