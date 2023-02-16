@@ -42,3 +42,5 @@ var plusOne = function(digits) {
     if(carry>0) digits.unshift(carry)
     return digits
 };
+
+// or using BigInt return (BigInt(digits.join("")) +1n).toString().split("")
