@@ -2,13 +2,13 @@ var maxLevelSum = function(root) {
     let obj={},res,max=-Infinity
     const dfs=(node,level=1)=>{
         if(!node) return
-        obj[level] ? obj[level].push(node.val) : obj[level]=[node.val]
+        obj[level] ? obj[level]+=node.val : obj[level]=node.val
         dfs(node.left,level+1)
         dfs(node.right,level+1)
     }
     dfs(root)
     for(x in obj){
-        let curr = obj[x].reduce((a,c)=>a+c,0)
+        let curr = obj[x]
         if(curr > max) {
 
             res=x
@@ -16,7 +16,7 @@ var maxLevelSum = function(root) {
         }
     }
     return res
-};  
+};
 
 // Given the root of a binary tree, the level of its root is 1, the level of its children is 2, and so on.
 
