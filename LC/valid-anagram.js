@@ -1,12 +1,8 @@
 var isAnagram = function(s, t) {
-    if(s.length!=t.length) return false
-    for(i=0; i<s.length; i++ ){
-        if(!s.includes(t[i])) {
-            return false
-        }
-        s=s.replace(t[i],"")
-    }
-    return true
+    var isAnagram = function(s, t) {
+        if(s.length!=t.length) return false
+        return [...s].sort().join("")==[...t].sort().join("")
+    };
     
 };
 
