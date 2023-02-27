@@ -1,9 +1,6 @@
-var isAnagram = function(s, t) {
-    var isAnagram = function(s, t) {
-        if(s.length!=t.length) return false
-        return [...s].sort().join("")==[...t].sort().join("")
-    };
-    
+const isAnagram = (s, t)=> {
+    if(s.length!=t.length) return false
+    return [...s].sort().join("")==[...t].sort().join("")
 };
 
 // Given two strings s and t, return true if t is an anagram of s, and false otherwise.
