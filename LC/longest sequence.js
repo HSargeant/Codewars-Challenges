@@ -21,18 +21,20 @@
  * @return {number}
  */
 var longestConsecutive = function(nums) {
+    if(!nums.length) return 0
     nums.sort((a,b)=>a-b)
-    console.log(nums)
-    let count=1
-    let res=new Set()
-    for(i=0; i<nums.length; i++){
-        if(nums[i+1]==nums[i]+1|| nums[i+1]==nums[i]){
+    let check = [...new Set(nums)]
+    let count=1,max=0
+    for(i=0; i<check.length; i++){
+        if(check[i]==check[i+1]-1){
             count++
-            if(nums[i]==nums[i+1]) count--
         }else{
-            if(count) res.add(count)
+            max = Math.max(count,max)
             count=1
+
         }
-    }  
-    return res.size!=0? Math.max(...res) :0
+
+    }
+    return max
+
 };
