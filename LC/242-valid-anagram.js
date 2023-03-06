@@ -1,7 +1,22 @@
-const isAnagram = (s, t)=> {
+// 3/4
+var isAnagram = function(s, t) {
     if(s.length!=t.length) return false
-    return [...s].sort().join("")==[...t].sort().join("")
+    let obj={},obj1={}
+    for(i=0;i<s.length; i++){
+        obj[s[i]]=obj[s[i]]+1||1
+        obj1[t[i]]=obj1[t[i]]+1||1
+    }
+    for(i in obj){
+        if(obj[i]!==obj1[i]) return false
+    }
+    return true
 };
+
+// // sort
+// const isAnagram = (s, t)=> {
+//     if(s.length!=t.length) return false
+//     return [...s].sort().join("")==[...t].sort().join("")
+// };
 
 // Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
