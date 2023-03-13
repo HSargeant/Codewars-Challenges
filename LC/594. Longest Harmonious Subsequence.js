@@ -12,7 +12,7 @@ for ( i in o) {
         console.log(i)
         count=Math.max(count,o[i-1]+o[i])
     }
-}
+} 
 return count    
 
     
