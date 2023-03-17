@@ -1,14 +1,9 @@
-var isSymmetric = function(root) {
-return reflection(root,root)
-    
+var isSymmetric = function(root,root2=root) {
+    if (!root && !root2) return true;
+    if (!root || !root2) return false;
+    if (root.val !== root2.val) return false;
+    return isSymmetric(root.left, root2.right) && isSymmetric(root.right, root2.left); 
 };
-
-function reflection(r1, r2) {
-    if (!r1 && !r2) return true;
-    if (!r1 || !r2) return false;
-    if (r1.val !== r2.val) return false;
-    return reflection(r1.left, r2.right) && reflection(r1.right, r2.left);
-}
 
 
 // Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).

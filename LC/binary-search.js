@@ -1,8 +1,6 @@
 var search = function(nums, target) {
    // return nums.indexOf(target)
-    
-        let l = 0, r = nums.length - 1;
-    
+    let l = 0, r = nums.length - 1;
     while (l <= r) {
         // calc middle index
         const mid = Math.floor((r + l) / 2);
