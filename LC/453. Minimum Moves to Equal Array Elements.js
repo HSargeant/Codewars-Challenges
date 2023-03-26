@@ -8,7 +8,6 @@ var minMoves = function(nums) {
 };
 
 
-
 // loop/recursion will not work with extreme cases i.e --- [ 1,2,100000]
 // var minMoves = function(nums,count=0) {
 //     if(nums.length==2) return nums.sort((a,b)=>b-a)[0]-nums[1]
