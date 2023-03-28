@@ -13,3 +13,13 @@
 // Input: s = ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 const reverseString =s=> s.reverse()
+// or two pointers
+// let l=0,r=s.length-1
+// // while(l<=r){
+// //     let temp= s[l]
+// //     s[l]=s[r]
+// //     s[r]=temp
+// //     l++
+// //     r--
+// // }
+// // return s
