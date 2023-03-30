@@ -18,15 +18,12 @@ var buildTree = function(pre, ino) {
     let rootindex = ino.indexOf(pre[0])
     let leftp = pre.slice(1,rootindex+1)
     let lefti = ino.slice(0,rootindex)
-    
+
     let rightp = pre.slice(rootindex+1,pre.length)
     let righti = ino.slice(rootindex+1,ino.length)
 
-    
     root.left = buildTree(leftp,lefti)
     root.right = buildTree(rightp,righti)           
-    
-    
     return root
     
 };
@@ -55,7 +52,3 @@ var buildTree = function(pre, ino) {
 // Each value of inorder also appears in preorder.
 // preorder is guaranteed to be the preorder traversal of the tree.
 // inorder is guaranteed to be the inorder traversal of the tree.
-// Accepted
-// 843,351
-// Submissions
-// 1,399,239
