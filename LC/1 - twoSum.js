@@ -4,7 +4,7 @@
  * @return {number[]}
  */
  var twoSum = function(nums, target) {
-    //old reliable for loop
+    //brute force
     // let result=[]
     // for(i=0; i<nums.length; i++){
     //     let x = nums[i]
@@ -15,12 +15,17 @@
     //         } 
     //     }  
     // }  
-//  2nd solution: wanted to complete it without nested for loops
-     for(i=0; i<nums.length; i++){
-        
-        let y = nums.slice(i+1)
-        if(y.includes(target - nums[i]))
-            return [i,(y.indexOf(target-nums[i]))+i+1]
-    }
+    //  2nd solution: wanted to complete it without nested for loops
+    let result=[],o={}
+    var twoSum = function(arr, target) {
+        let result=[],o={}
+        for(let i=0;i<arr.length;i++){
+            if(o[arr[i]]) return [o[arr[i]],i]
+                o[target-arr[i]]=i
+        }
+        for(i=0;i<arr.length;i++){
+            if(o[arr[i]]) return [o[arr[i]],i]
+        }
+    };
     
 };
