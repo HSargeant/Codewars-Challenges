@@ -22,15 +22,19 @@
 // Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 function lengthOfLongestSubstring(s){
-    let l=0,r=0,o= new Set(),max=0
-    while(r<s.length){
-        while(o.has(s[r])){
-            o.delete(s[l])
-            l++
+    if(!s.length) return 0
+    if(s.length==1) return 1
+    let set = new Set(),l=0,res=0
+    for(i=0; i<s.length; i++){
+        if(!set.has(s[i])){
+            set.add(s[i])
+        }else{
+            while(set.has(s[i])){
+                set.delete(s[l])
+                l++
+            }
+            set.add(s[i])
         }
-        o.add(s[r])
-        max=Math.max(max,o.size)
-        r++
     }
-    return max
+    return Math.max(res,set.size)
 };

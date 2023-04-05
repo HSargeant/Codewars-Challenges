@@ -38,3 +38,25 @@ var longestConsecutive = function(nums) {
     return max
 
 };
+
+// o(n)
+// var longestConsecutive = function(nums) {
+//     if(!nums.length) return 0
+//     let res=0,o={}
+//     nums.forEach(x=>{
+//         o[x]=true
+//     })
+//     for(i in o){
+//         if (!o[i-1]) {
+//             let count = 0
+//             while (o[i]) {
+//                 count++
+//                 i++
+//             }
+//             res = Math.max(res, count)
+//         }
+//     }
+
+//     return res
+
+// };
