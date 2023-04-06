@@ -10,17 +10,20 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
-    let temp = root
-    let count= 0
-     let dfs = (node, depth) => {
-        if (!node) return count;
-        count = Math.max(count,depth)
-        dfs(node.right, depth + 1);
-        dfs(node.left, depth + 1);
-    };
-     dfs(root,1)
-    return count
+const maxDepth = (root)=> {
+    let max= 0
+    let dfs=(node,count=1)=>{
+        if(!node) return
+        max=Math.max(max,count)
+        if(node.left){
+           dfs(node.left,count+1)
+        }
+        if(node.right){
+            dfs(node.right,count+1)
+        }
+    }
+    dfs(root)
+    return max
 };
 
 // Given the root of a binary tree, return its maximum depth.

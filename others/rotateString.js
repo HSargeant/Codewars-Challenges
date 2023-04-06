@@ -2,11 +2,12 @@
 
 const rotateString=(s,k)=>{
     // k == 2  s = abcd -----cdab
-    k%=x.length
-    return x.slice(-k)+x.slice(0,-k)
+    k%=s.length
+    return s.slice(-k)+s.slice(0,-k)
 }
 
 
 
 
-rotateString("abcd",2) //==cdab
+console.log(rotateString("abcd",2)) //==cdab
+console.log(rotateString("a3456bcd",5)) //==cdab

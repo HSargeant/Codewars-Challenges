@@ -37,15 +37,13 @@
 var findMin = function(nums) {
     // return Math.min(...nums)
     let l=0,r=nums.length-1,mid,min=5001
-    while(l<=r){
+    while(l<r){
         mid=Math.floor((l+r)/2)
-
-        min=Math.min(nums[l],nums[mid],min,nums[r])
-        if(nums[l]<nums[mid]) {
+        if(nums[r]<nums[mid]) {
             l=mid+1
         }else {
-            r=mid-1
+            r=mid
         }       
     }
-    return min
+    return nums[l]
 };
