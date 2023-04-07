@@ -7,7 +7,5 @@ const rotateString=(s,k)=>{
 }
 
 
-
-
 console.log(rotateString("abcd",2)) //==cdab
 console.log(rotateString("a3456bcd",5)) //==cdab
