@@ -12,18 +12,20 @@ function ListNode(val, next) {
 var mergeKLists = function(lists) {
    if(!lists.length) return null
    
-   for(let i=0; i<lists.length; i++){
-       while(lists.length>1){
-           let arr=[]
-           for(i=0; i<lists.length; i+=2){
-           let l2 = lists[i+1]||null
-               arr.push(mergelist(lists[i],l2))
-           }
-           lists=arr
-       }
-       return lists[0]
+//    for(let i=0; i<lists.length; i++){
+//        while(lists.length>1){
+//            let arr=[]
+//            for(i=0; i<lists.length; i+=2){
+//            let l2 = lists[i+1]||null
+//                arr.push(mergelist(lists[i],l2))
+//            }
+//            lists=arr
+//        }
+//        return lists[0]
        
-   }
+//    }
+// or simply use reduce
+    return lists.reduce(mergelist)
 };
 
 const mergelist=(l1,l2)=>{

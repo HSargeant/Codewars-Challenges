@@ -26,12 +26,25 @@
  */
 var invertTree = function(root) {
     if(!root) return null
-    let node = root
-        let y = node.left
-        node.left = node.right
-        node.right = y
-        node=node.right ||node.left
-    invertTree(root.left)
-    invertTree(root.right)
+    // recursion
+    // let temp = root
+    // let y = temp.left
+    // temp.left = temp.right
+    // temp.right = y
+    // invertTree(root.left)
+    // invertTree(root.right)
+    // return root
+    
+    // bfs
+    let q=[root]
+    while(q.length){
+        let x = q.shift()
+        console.log(x.val)
+        let temp = x.left
+        x.left = x.right
+        x.right = temp
+        if(x.left) q.push(x.left)
+        if(x.right) q.push(x.right)
+    }
     return root
 };
