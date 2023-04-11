@@ -10,16 +10,16 @@
  * @param {Node} node
  * @return {Node}
  */
-var cloneGraph = function(node,checked=[]) {
+var cloneGraph = function(node,checked=new Map()) {
     if(!node) return node
     let nnode= new Node(node.val)
-    checked[node.val] = nnode;
+    checked.set(node.val,nnode)
         for(let x of node.neighbors){
-            if(!checked[x.val]){
+            if(!checked.has(x.val)){
                 let newN = cloneGraph(x,checked)
                 nnode.neighbors.push(newN)
             }else{
-                let newN = checked[x.val]
+                let newN = checked.get(x.val)
                 nnode.neighbors.push(newN)
             }
         }
