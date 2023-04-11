@@ -22,18 +22,15 @@ var dailyTemperatures = function(a) {
 //     let track=0
 //     if(a.length==1) return [0]
 //     if(a.length==2){
-        
 //         if(a[1]>a[0]){
-//         a[0]=0
-//         }else a[0]=0
-//         a[a.length-1]=0
-//         return a
+//         return [1,0]
+//         }
+//         return [0,0]
 //     }
 //     for(i=0; i<a.length; i++){
-//         track++
 //         let count=1
 //         let check = a[i]
-//         for(j=track; j<a.length; j++){
+//         for(j=i+1; j<a.length; j++){
 
 //             if(a[j]>check){
 //                 a[i]=count
@@ -50,8 +47,7 @@ var dailyTemperatures = function(a) {
 };
 
 
-// Daily Temperatures
-// Medium
+// 739 Daily Temperatures// Medium
 
 // 8368
 

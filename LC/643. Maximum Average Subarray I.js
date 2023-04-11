@@ -4,8 +4,7 @@
  * @return {number}
  */
 var findMaxAverage = function(nums, k) {
-    let r=k-1,l=0
-    let max= -(2**31)
+    let max= -Infinity
     let sum = nums.slice(0,k).reduce((a,c)=>a+c,0)
     let average = sum/k
     max = Math.max(max,average)
@@ -16,10 +15,10 @@ var findMaxAverage = function(nums, k) {
         max = Math.max(max,average)
         index++
     }
-    
     return max
 };
 
+// 643 Maximum Average Subarray
 // You are given an integer array nums consisting of n elements, and an integer k.
 
 // Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
