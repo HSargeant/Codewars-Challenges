@@ -1,3 +1,5 @@
+// 46. Permutations
+
 // https://leetcode.com/problems/permutations/
 // Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
 
@@ -32,7 +34,7 @@ var permute = function(nums) {
     
     const dfs =(i,temp)=>{
         if(temp.length==nums.length) {
-        return res.push([...temp])
+            return res.push([...temp])
         }
         for(i=0; i<nums.length; i++){
         if(temp.includes(nums[i])) continue

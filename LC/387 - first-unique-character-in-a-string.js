@@ -1,15 +1,18 @@
+// 387. First Unique Character in a String
 const firstUniqChar = function(s) { 
+    // loveleetcode return 2 
+    let charCount={}
     for(i=0; i<s.length; i++){
-        let f=s.indexOf(s[i])
-        let l=s.lastIndexOf(s[i])
-        if(f==l) return i     
+        charCount[s[i]] = charCount[s[i]]+1||1
+
+    }
+    for(i=0; i<s.length; i++){
+        if(charCount[s[i]]==1)  return i
+
     }
     return -1
 };
-
 // Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
-
- 
 
 // Example 1:
 
@@ -24,7 +27,6 @@ const firstUniqChar = function(s) {
 // Input: s = "aabb"
 // Output: -1
  
-
 // Constraints:
 
 // 1 <= s.length <= 105
