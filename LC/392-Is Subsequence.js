@@ -18,6 +18,9 @@
 // s and t consist only of lowercase English letters.
  
 // Follow up: Suppose there are lots of incoming s, say s1, s2, ..., sk where k >= 109, and you want to check one by one to see if t has its subsequence. In this scenario, how would you change your code?
+
+// 392. Is Subsequence
+
 const isSubsequence = (s, t)=> {
     if(s==t) return true
     if (s.length > t.length) return false;
