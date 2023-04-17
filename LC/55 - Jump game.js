@@ -3,9 +3,7 @@
  * @return {boolean}
  */
 var canJump = function(nums) {
-    let dist=1
     let start=nums.length-1
-    let canIt = true
     for(i=nums.length-2; i>-1; i--){
         if(start-i <= nums[i]) {
            start = i
@@ -16,6 +14,21 @@ var canJump = function(nums) {
     
     return start==0
 };
+
+or
+// const canJump = (arr)=> {
+//     let count=1, res=true
+//     for(i=arr.length-2; i>=0; i--){
+//        if(arr[i] >= count){
+//            res= true
+//            count=1
+//        }else{
+//            res=false
+//            count++
+//        }
+//     }
+//     return res   
+// }
 // https://leetcode.com/problems/jump-game/
 // 55. Jump Game
 
