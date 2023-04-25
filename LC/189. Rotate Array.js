@@ -2,7 +2,7 @@ var rotate = function(nums, k) {
     k%=nums.length
     nums.unshift(...nums.splice(-k));
 };
-
+// 189 rotate array
 // or
 
 // if(!nums.length) return 

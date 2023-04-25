@@ -13,7 +13,7 @@ is_prime(2)   true
 is_prime(-1)  false */
 
 
-
+// is a number prime
 function isPrime(num) {
   
  let factorMustBeLess=Math.sqrt(num) // if a number is not prime then it has a factor that is less than its square root

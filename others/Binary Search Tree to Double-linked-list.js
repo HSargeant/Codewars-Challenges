@@ -14,7 +14,7 @@ class TreeNode{
     }
 }
 
-const bintoList=(root)=>{
+const bstToList=(root)=>{
     let res=[]
     let dfs=(node)=>{
         if(!node) return

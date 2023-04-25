@@ -1,3 +1,4 @@
+// 258 Add Digits
 const addDigits = (num)=>{
   if(num<10) return num
   return num%9==0 ?9:num%9
