@@ -8,6 +8,7 @@
 
 // Input: nums = [2,2,1]
 // Output: 1
+// 136 single Number
 
 var singleNumber = function(nums) {
     let o={}

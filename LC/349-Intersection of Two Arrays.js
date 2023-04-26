@@ -1,3 +1,4 @@
+// 349 Intersection of Two Arrays
 // Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
 
 // Example 1:
@@ -16,13 +17,13 @@
 // 0 <= nums1[i], nums2[i] <= 1000
 // easy
 const intersection=(a,b)=>{
-    let obj={},res=[],set= new Set()
-    a.forEach(x=>obj[x]=true)
+    let obj={},res=[]
+    a.forEach(x=>obj[x]=1)
     for(x of b){
-        if(obj[x]&&!set.has(x)) {
-            set.add(x)
+        if(obj[x]>0) {
             res.push(x)
         }
+            obj[x]--
     }
    return res
 };
