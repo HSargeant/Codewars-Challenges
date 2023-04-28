@@ -1,6 +1,7 @@
 var isPalindrome = function(x) {
     return (x+"") ==(x+"").split("").reverse().join("")
 };
+// 9 - Palindrom Number
 // Given an integer x, return true if x is a 
 // palindrome
 // , and false otherwise.

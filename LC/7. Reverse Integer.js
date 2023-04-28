@@ -15,6 +15,7 @@ var reverse = function(x) {
     return res<=2147483647 && res >=-2147483648? res: 0
 };
 
+// 7. Reverse Integer
 
 // reverse array method
     
