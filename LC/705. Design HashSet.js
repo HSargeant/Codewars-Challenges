@@ -6,13 +6,14 @@ class MyHashSet{
     contains(key) {
         return this.hashset[key] ? true:false
     }
+
     add(key) {
-         this.hashset[key]=true
+        this.hashset[key]=true
     }
+        
     remove(key) {
         delete this.hashset[key]
-    }
-    
+    } 
 };
 
 
