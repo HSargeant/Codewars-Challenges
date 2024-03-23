@@ -1,6 +1,5 @@
 var eraseOverlapIntervals = function(intervals) {
     intervals.sort((a,b)=>a[0]-b[0])
-    console.log(intervals)
     let start=intervals[0][0],end=intervals[0][1],count=0
     for(i=1; i<intervals.length;i++){
         let curr= intervals[i]
