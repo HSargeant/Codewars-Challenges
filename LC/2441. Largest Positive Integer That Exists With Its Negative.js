@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findMaxK = function(nums) {
+function findMaxK(nums) {
     let max=-1,o={}
     for(i of nums){
         o[i]=true

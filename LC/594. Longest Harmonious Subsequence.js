@@ -4,7 +4,7 @@
  */
 var findLHS = function(nums) {
     let o={},count=0;
-for (let i = 0, j = 0; i < nums.length; i++) {
+for (let i = 0; i < nums.length; i++) {
     o[nums[i]]=o[nums[i]]+1||1
 }
 for ( i in o) {
