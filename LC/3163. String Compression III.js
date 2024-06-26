@@ -1,6 +1,6 @@
-var compressedString = function (word) {
-    if(word.length==1) return "1"+word[0]
-    if(!word) return ""
+function compressedString(word) {
+    if (word.length == 1) return "1" + word[0]
+    if (!word) return ""
     let curr = word[0], count = 1, res = ""
     for (let i = 1; i < word.length; i++) {
         if (word[i] == curr) {
@@ -20,8 +20,6 @@ var compressedString = function (word) {
         }
     }
     return res
-
-
 };
 // 3163. String Compression III
 
@@ -32,7 +30,7 @@ var compressedString = function (word) {
 // Append the length of the prefix followed by c to comp.
 // Return the string comp.
 
- 
+
 
 // Example 1:
 
@@ -59,9 +57,27 @@ var compressedString = function (word) {
 // For prefix "aaaaaaaaa", append "9" followed by "a" to comp.
 // For prefix "aaaaa", append "5" followed by "a" to comp.
 // For prefix "bb", append "2" followed by "b" to comp.
- 
+
 
 // Constraints:
 
 // 1 <= word.length <= 2 * 105
 // word consists only of lowercase English letters.
+
+function undo(s) {
+    let num = "", result = ""
+    for (let i = 0; i < s.length; i++) {
+        if (Number.isInteger(+s[i])) {
+            num = num + s[i]
+        } else {
+            let char = s[i]
+            num = +num
+            result += (char.repeat(num))
+            num=""
+        }
+    }
+    return result
+}
+let str = compressedString("aaaaaaaaaaaaaabb")
+console.log(str)
+console.log(undo(str))

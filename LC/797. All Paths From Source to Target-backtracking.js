@@ -2,17 +2,9 @@
  * @param {number[][]} graph
  * @return {number[][]}
  */
- //loop through
- //take note of all numbers in array at current index and to temp array
- // for the numbers in the temp array when at their index, add any new numbers to temp array.
- //when at end push to results array
- // remove added items to temp and to object
- //call back again
 
 var allPathsSourceTarget = function(graph) {
-
     let res=[]
-
     const dfs=(i,temp)=>{
         temp.push(i)
         if(i==graph.length-1){
@@ -25,11 +17,10 @@ var allPathsSourceTarget = function(graph) {
         }
     }
     dfs(0,[])
-    return res
-    
+    return res  
 };
 
-
+// 797. All Paths From Source to Target
 // https://leetcode.com/problems/all-paths-from-source-to-target/
 // Given a directed acyclic graph (DAG) of n nodes labeled from 0 to n - 1, find all possible paths from node 0 to node n - 1 and return them in any order.
 

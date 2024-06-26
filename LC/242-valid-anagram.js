@@ -1,17 +1,17 @@
 // 3/4
-var isAnagram = function(s, t) {
-    if(s.length!=t.length) return false
-    let obj={},obj1={}
-    for(i=0;i<s.length; i++){
-        obj[s[i]]=obj[s[i]]+1||1
-        obj1[t[i]]=obj1[t[i]]+1||1
+function isAnagram(s, t) {
+    if (s.length != t.length) return false
+    let o = {}
+    for (let i in s) {
+        o[s[i]] != undefined ? o[s[i]]++ : o[s[i]] = 1
+        o[t[i]] != undefined ? o[t[i]]-- : o[t[i]] = -1
     }
-    for(i in obj){
-        if(obj[i]!==obj1[i]) return false
+    for (let key in o) {
+        if (o[key] != 0) return false
     }
     return true
 };
-
+// 242. Valid Anagram
 // // sort
 // const isAnagram = (s, t)=> {
 //     if(s.length!=t.length) return false

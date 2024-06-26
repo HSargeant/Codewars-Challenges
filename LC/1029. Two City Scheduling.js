@@ -25,7 +25,7 @@ var twoCitySchedCost = function(costs) {
     }
     return total
 };
-
+// 1029. Two City Scheduling
 // https://leetcode.com/problems/two-city-scheduling/description/
 // A company is planning to interview 2n people. Given the array costs where costs[i] = [aCosti, bCosti], the cost of flying the ith person to city a is aCosti, and the cost of flying the ith person to city b is bCosti.
 

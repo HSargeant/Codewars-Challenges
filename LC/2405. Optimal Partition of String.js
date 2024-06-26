@@ -3,6 +3,7 @@
  * @return {number}
  */
 var partitionString = function (s) {
+    if(!s) return 0
     const set = new Set();
     let count = 0;
     for (const char of s) {
@@ -14,12 +15,7 @@ var partitionString = function (s) {
             set.add(char);
         }
     }
-
-    if (set.size > 0) {
-        count++;
-    }
-
-    return count;
+    return count+1;
 
 };
 // 2405. Optimal Partition of String
