@@ -19,22 +19,4 @@ var productExceptSelf = function(nums) {
     }
     return res
 }
-
-
-// / Better solution above
-//  * @param {number[]} nums
-//  * @return {number[]}
-//  */
-//  var productExceptSelf = function(nums) {
-//     let res=[]
-//     for(i=0; i<nums.length; i++){
-//        let left  = nums.slice(0,i)
-//        let right = nums.slice(i+1,nums.length)
-//        l = left.reduce((a,c)=>a*c,1)
-//        r=right.reduce((a,c)=>a*c,1)
-       
-//        res.push(l*r)
-       
-//     }
-//     return res
-// }
+// 238. Product of Array Except Self
