@@ -35,22 +35,28 @@
 // 1 <= chars.length <= 2000
 // chars[i] is a lowercase English letter, uppercase English letter, digit, or symbol
 
-var compress = function(chars) {
-    let n = chars.length;
-    let count = 1;
-    
-    for (let i = n - 2; i >= 0; i--) {
-        if (chars[i] == chars[i+1]) {
-            count++;
-        } else if (count > 1) {
-            chars.splice(i+2, count-1, ...count.toString().split(''));           
-            count = 1;
+function compress(chars) {
+    let count = 1, s = chars[0]
+    for (let i = 1; i < chars.length; i++) {
+        let curr = chars[i]
+        if (curr == s[s.length - 1]) {
+            count++
+        } else {
+            if (count > 1) {
+                s += count
+                count = 1
+                s += curr
+            } else {
+                count = 1
+                s += curr
+            }
         }
-    }
-    
-    if (count > 1) {
-        chars.splice(1, count-1, ...count.toString().split(''));           
-    }
-    
 
+
+    }
+    if (count > 1) s += count
+    for (let i = 0; i < s.length; i++) {
+        chars[i] = s.charAt(i)
+    }
+    return s.length
 };
