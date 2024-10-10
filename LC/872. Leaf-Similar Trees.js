@@ -26,8 +26,7 @@ var leafSimilar = function (root1, root2) {
     if (s.length != a.length) return false
     return s.every((x, i) => x == a[i])
 };
-
-// Leaf-Similar Trees- Easy
+// 872. Leaf-Similar Trees
 
 // Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.
 

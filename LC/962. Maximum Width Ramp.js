@@ -16,7 +16,7 @@ var maxWidthRamp = function (nums) {
     for (let i = nums.length - 1; i >= 0; i -= 1) {
         let last = stack[stack.length - 1]
 
-        while (stack.length > 0 && nums[i] >= nums[last]) {
+        while (stack.length > 0 && nums[stack[stack.length - 1]] <= nums[i]) {
             const idx = stack.pop()
             res = Math.max(res, i - idx)
         }
