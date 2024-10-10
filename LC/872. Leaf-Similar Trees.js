@@ -11,26 +11,21 @@
  * @param {TreeNode} root2
  * @return {boolean}
  */
-var leafSimilar = function(root1, root2) {
-    let res=true
-    let a=[],b=[]
-    traverse(root1,a)
-    traverse(root2,b)
-    if(a.length!==b.length) return false
-    for(i=0; i<a.length; i++){
-        if(a[i]!==b[i]) return false
+var leafSimilar = function (root1, root2) {
+    let s = [], a = []
+    const dfs = (root, arr = []) => {
+        if (!root) return
+        if (!root.left && !root.right) {
+            arr.push(root.val)
+        }
+        dfs(root.left, arr)
+        dfs(root.right, arr)
     }
-    return true
+    dfs(root1, s)
+    dfs(root2, a)
+    if (s.length != a.length) return false
+    return s.every((x, i) => x == a[i])
 };
-
-const traverse=(node,a=[])=>{
-    
-    if(!node) return 
-    traverse(node.left,a)
-   if(!node.left&&!node.right) a.push(node.val)
-    traverse(node.right,a)
-}
-
 
 // Leaf-Similar Trees- Easy
 
