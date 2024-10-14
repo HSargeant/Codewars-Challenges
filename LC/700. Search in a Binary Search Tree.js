@@ -1,11 +1,11 @@
-var searchBST = function(root, val) {
-    while(root){
-        if(root.val ==val){
+var searchBST = function (root, val) {
+    while (root) {
+        if (root.val == val) {
             return root
-        }else if(root.val < val){
-            root=root.right
-        }else {
-            root=root.left
+        } else if (root.val < val) {
+            root = root.right
+        } else {
+            root = root.left
         }
     }
     return root
@@ -16,7 +16,7 @@ var searchBST = function(root, val) {
 
 // Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
 
- 
+
 
 // Example 1:
 
@@ -28,7 +28,7 @@ var searchBST = function(root, val) {
 
 // Input: root = [4,2,7,1,3], val = 5
 // Output: []
- 
+
 
 // Constraints:
 
@@ -36,3 +36,11 @@ var searchBST = function(root, val) {
 // 1 <= Node.val <= 107
 // root is a binary search tree.
 // 1 <= val <= 107
+
+// recursion
+// function searchBST(root, val) {
+//     if (!root) return null
+//     if (root.val == val) return root
+//     if (val > root.val) return searchBST(root.right, val)
+//     else return searchBST(root.left, val)
+// };
