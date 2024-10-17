@@ -32,37 +32,37 @@
 //   [3, 0, 0, 4, 8, 1, 1, 7, 9]
 // ]); // => false
 JavaScript:
-function validSolution(board){
+function validSolution(board) {
   //sum 1+2...+9=45
-  
+
   //use the sum to check columns for non solutions
-   for(i=0; i < 9; i++){
+  for (i = 0; i < 9; i++) {
     let sum = 0
-    for(j=0; j < 9; j++){
-    sum += board[j][i]
-}
-   if(sum !== 45) {
-     return false
-   }
-}
-  
-// check rows for non solutions
-    for(i=0; i < 9; i++){
-    let sum = board[i].reduce((a, b) => a+b)
-    if(sum !==45){
+    for (j = 0; j < 9; j++) {
+      sum += board[j][i]
+    }
+    if (sum !== 45) {
       return false
     }
   }
-  
+
+  // check rows for non solutions
+  for (i = 0; i < 9; i++) {
+    let sum = board[i].reduce((a, b) => a + b)
+    if (sum !== 45) {
+      return false
+    }
+  }
+
   //check 3x3 boxes for non solutions
-  for(i=0; i < 9; i++){
+  for (i = 0; i < 9; i++) {
     let sum = 0
-    for(j=0; j < 3; j++){
-        for(k=0; k < 3; k++){
-    sum += board[j][k]
-}
-}
-   if(sum !== 45) return false
-}
+    for (j = 0; j < 3; j++) {
+      for (k = 0; k < 3; k++) {
+        sum += board[j][k]
+      }
+    }
+    if (sum !== 45) return false
+  }
   return true
 }
