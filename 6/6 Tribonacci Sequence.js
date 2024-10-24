@@ -17,18 +17,17 @@
 
 // [Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast and for showing me this mathematical curiosity too with his usual contagious passion :)]
 
-function tribonacci(sig,n){
-  console.log(sig, n)
-  if(n ==0) return []
-  if(n<sig.length){
-    let x =[]
-    for(i=0; i<n; i++){
+function tribonacci(sig, n) {
+  if (n == 0) return []
+  if (n < sig.length) {
+    let x = []
+    for (i = 0; i < n; i++) {
       x.push(sig[i])
     }
-     return x
-     }
-  while(sig.length !==n){
-    sig.push(sig[sig.length-1] + sig[sig.length-2] +sig[sig.length-3] )
+    return x
+  }
+  while (sig.length !== n) {
+    sig.push(sig[sig.length - 1] + sig[sig.length - 2] + sig[sig.length - 3])
   }
   return sig
 }
