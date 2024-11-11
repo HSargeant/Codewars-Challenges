@@ -3,13 +3,15 @@
  * @param {number} k
  * @return {number}
  */
-var kthFactor = function(n, k) {
-    let factorList=[]
-    for(i=1; i<=n; i++){
+function kthFactor (n, k) {
+    let res=-1,i=1
+    while(i<=n && k>0){
         if(n%i == 0){
-            factorList.push(i)
+            res=i
+            k--
         }
+        i++
     }
-    return factorList[k-1]? factorList[k-1] : -1
+    return k==0 ? res : -1
 };
 // 1492. The kth Factor of n
