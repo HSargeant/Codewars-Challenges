@@ -26,7 +26,7 @@ var alertNames = function(keyName, keyTime) {
         let arr= employees[key]
         for(let j=2; j<arr.length; j++){
             let limit= arr[j-2]+hour
-            if(arr[j]<=limit &&arr[j-1]<=limit){
+            if(arr[j]<=limit){
                 res.push(key)
                 break
             }
