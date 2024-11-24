@@ -25,8 +25,6 @@ function drop(r, c, a) {
     return
 }
 
-
-
 function rotate(m) {
     let res = Array(m[0].length).fill().map(x => Array(m.length).fill(0))
     for (let r = 0; r < m.length; r++) {
