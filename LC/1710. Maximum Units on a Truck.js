@@ -15,9 +15,7 @@ var maximumUnits = function(boxTypes, truckSize) {
             roomLeft-=boxes
             continue
         }
-        while(boxes>roomLeft&&boxes>0){
-            boxes--
-        }
+        boxes = roomLeft
         roomLeft-=boxes
         res+=boxes*units
         i++
