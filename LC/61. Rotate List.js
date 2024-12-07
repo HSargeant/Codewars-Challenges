@@ -10,7 +10,6 @@ function rotateRight (head, k) {
     a.unshift(...a.splice(-k))
     let res= new ListNode(a[0])
     temp=res
-    let i=0
     for(let i = 1 ; i<a.length; i++){
         temp.next = new ListNode(a[i])
         temp=temp.next
