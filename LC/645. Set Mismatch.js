@@ -3,32 +3,22 @@
  * @return {number[]}
  */
 var findErrorNums = function(nums) {
-    nums.sort((a,b)=>a-b)
-    let a,b
+    let curr = 0
+    let sum=0,target=0
+    let set= new Set(nums)
     for(let i=0; i<nums.length; i++){
-        if(nums[i]==nums[i+1]){
-            a=nums[i]
+        curr+=nums[i]
+        if(set.has(nums[i])) {
+            sum+=nums[i]
+            set.delete(nums[i])
         }
-          if(a!=undefined) break
+        target+=i+1
     }
-    if (nums[0] !== 1){
-        return [a, 1];
-    }
-    if (nums[nums.length-1] !== nums.length){
-        return [a, nums.length];
-    }
-    for(let i=0; i<nums.length; i++){
-      if(nums[i+1]-nums[i]==2){
-            b=nums[i+1]-1
-            break
-        }
-    }
-
-
+    let a = curr-sum
+    let b = target - sum
     return [a,b]
-    
 };
-
+// 645. Set Mismatch
 
 // Set mismatch
 // You have a set of integers s, which originally contains all the numbers from 1 to n. Unfortunately, due to some error, one of the numbers in s got duplicated to another number in the set, which results in repetition of one number and loss of another number.
