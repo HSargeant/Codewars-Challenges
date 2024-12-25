@@ -5,3 +5,5 @@ function reversePrefix(word, ch) {
     return start.split("").reverse().join("") + end
 };
 // 2000. Reverse Prefix of Word
+
+console.log(reversePrefix("hello","l"))
