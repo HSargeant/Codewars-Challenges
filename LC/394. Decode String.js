@@ -3,32 +3,27 @@
  * @return {string}
  */
 var decodeString = function(s) {
-        let temp=[]
+    let temp=[]
     for(i=0; i<s.length; i++){
         if(s[i]!="]"){
             temp.push(s[i])
         }else {
-            console.log(temp)
             let res=""
             while(temp[temp.length-1] !="["){
                 res=temp.pop() + res
-                // console.log(temp)
             }
             temp.pop()
             num=""
             while(temp && Number.isInteger(+temp[temp.length-1])){
                 num = temp.pop()+num
             }
-            console.log(num)
-            temp.push(res.repeat(num))
-            
-            console.log(temp)
+            temp.push(res.repeat(num))            
         }
     }
     return temp.join("")
     
 };
-
+// 394. Decode String
 
 // Given an encoded string, return its decoded string.
 
